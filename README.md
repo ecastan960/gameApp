@@ -59,7 +59,7 @@ git --version
 On the command line, write:
 
 ```bash
-git clone https://github.com/ecastan960/nbaApp.git
+git clone https://github.com/ecastan960/gameApp.git
 ```
 
 - Inside the folder of the created repository, install the dependencies with the next command:
