@@ -50,7 +50,6 @@ const main = async () => {
           _users[name] = user;
 
           currentUser = _users;
-          console.log(currentUser);
           listUser.push(_users);
 
           console.log("User created. Please enter again to start the game");
