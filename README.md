@@ -73,7 +73,7 @@ npm install
 Once everthing is installed, you can run the file as follow:
 
 ```bash
-node App
+node app
 ```
 
 Once this is done, the terminal ask the user to select and option between play the game, edit the game and exit the app.
