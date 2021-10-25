@@ -10,10 +10,6 @@ class Answer {
     this.text = text;
     this.isCorrect = null;
   }
-
-  // correctAns() {
-  //   this.isCorrect = true;
-  // }
 }
 
 module.exports = Answer;

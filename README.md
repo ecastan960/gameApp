@@ -12,8 +12,12 @@ creation of the project:
 - Javascript
   - Array manipulation.
   - Classes
-- axios
-  - http get request
+- inquirer
+  - Console manipulation
+- UUID
+  - Unique ID creation
+- colors
+  - Change appearance of text in console
 
 ## Requirements
 
@@ -70,3 +74,11 @@ Once everthing is installed, you can run the file as follow:
 ```bash
 node App
 ```
+
+Once this is done, the terminal ask the user to select and option between play the game, edit the game and exit the app.
+
+![App Screenshot](./sources/firstmenu.JPG)
+
+If you select to play the game, the console would ask to enter the user's name. Once this is done, it would be save in a file so that the progress can be saved. Then you have to enter again from the main menu to start the game.
+
+In each round, the user would have to answer one question, if it fails, the program would terminated, if it's successful, the user score and category would be updated. Once the player passes correctly 5 rounds, the challenge will be completed.

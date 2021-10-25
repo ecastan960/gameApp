@@ -21,6 +21,7 @@ const main = async () => {
   let roundDB = readDB("./db/data.json");
   let userDB = readDB("./db/user.json");
   let found = false;
+  // Load information
   if (roundDB) {
     listRound = roundDB;
   }
@@ -30,7 +31,9 @@ const main = async () => {
 
   do {
     optionMain = await mainMenu();
-
+    /* Main selection list, you can select between playings and
+      and edit the questions of the game   
+    */
     switch (optionMain) {
       case "1":
         const name = await readInput("Please enter your name:");
@@ -58,7 +61,8 @@ const main = async () => {
           console.log("You alredy completed the challenge");
           return;
         }
-
+        /* logic to select randomly one question from the 5 available
+         */
         for (let i = currentUser.solved; i < 5; i++) {
           const questions = Object.keys(listRound[i]._listQuestions);
           const question =
@@ -71,7 +75,9 @@ const main = async () => {
               listRound[i]._listQuestions[question]._listAnswers[key];
             list.push(answer);
           });
+          // Text of the question
           console.log(listRound[i]._listQuestions[question].text);
+          // Available answers to select on console
           const id = await selectAnswer(list);
           if (id == 0) {
             console.log("Game canceled");
@@ -81,7 +87,6 @@ const main = async () => {
             if (list[i].id === id) {
               if (list[i].isCorrect) {
                 console.log("Congratulations, you earn 100 points");
-
                 listUser.forEach((user) => {
                   if (typeof user[name] !== "undefined") {
                     user[name].score += 100;
@@ -99,11 +104,12 @@ const main = async () => {
           }
         }
         _users = {};
+        // Save information of user
         saveDB(listUser, "./db/user.json");
         break;
       case "2":
         const optionEdit = await editMenu();
-
+        // Options availble to create or watch questions and answers
         switch (optionEdit) {
           case "1":
             const optionRound = await roundMenu();
@@ -200,6 +206,7 @@ const main = async () => {
               default:
                 break;
             }
+            // Save Questions information
             saveDB(listRound, "./db/data.json");
 
             break;
