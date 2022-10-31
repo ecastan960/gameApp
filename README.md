@@ -1,5 +1,12 @@
 # game_app
 
+## About myself
+
+Former mechanical engineer and now full time developer, looking to learn and improve on a daily basis:
+- Linkedin: https://www.linkedin.com/in/ecastan1/
+- Twitter: EstebanCastaoZ1
+- Project repositories: https://github.com/ecastan960?tab=repositories
+
 ## Overview
 
 This app is a game in which in order to win you need to ansewer correctly several questions.
